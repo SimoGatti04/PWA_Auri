@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Labirinto PWA</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <h1>Labirinto PWA</h1>
+    <canvas id="gameCanvas"></canvas>
+    <p>Livello: <span id="level">1</span></p>
+    <div id="mobileControls" class="mobile-controls">
+        <button id="upBtn">↑</button>
+        <div>
+            <button id="leftBtn">←</button>
+            <button id="rightBtn">→</button>
+        </div>
+        <button id="downBtn">↓</button>
+    </div>
+    <script type="module" src="main.js"></script>
+</body>
+</html>

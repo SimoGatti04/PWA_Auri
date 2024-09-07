@@ -1,0 +1,36 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, sans-serif;
+}
+
+canvas {
+    border: 1px solid black;
+}
+
+.mobile-controls {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.mobile-controls button {
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+    margin: 5px;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    touch-action: manipulation;
+}
+
+
+@media (max-width: 768px) {
+    .mobile-controls {
+        display: flex;
+    }
+}
