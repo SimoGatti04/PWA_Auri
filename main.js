@@ -4,7 +4,7 @@ const canvas = document.getElementById('gameCanvas');
 const levelDisplay = document.getElementById('level');
 
 const game = new Game(canvas, levelDisplay);
-game.start();
+game.init();
 
 // Gestione dell'orientamento per dispositivi mobili
 function handleOrientation() {
@@ -23,3 +23,5 @@ if ('serviceWorker' in navigator) {
         .then(reg => console.log('Service Worker registrato', reg))
         .catch(err => console.log('Service Worker non registrato', err));
 }
+
+

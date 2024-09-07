@@ -8,7 +8,7 @@
     <link rel="manifest" href="manifest.json">
 </head>
 <body>
-    <h1>Labirinto PWA</h1>
+    <h1>Labirinto</h1>
     <canvas id="gameCanvas"></canvas>
     <p>Livello: <span id="level">1</span></p>
     <div id="mobileControls" class="mobile-controls">
@@ -19,6 +19,26 @@
         </div>
         <button id="downBtn">↓</button>
     </div>
+    <div id="startOverlay" class="overlay">
+        <div class="overlay-content">
+            <h2>Aiuta Simo a recuperare i pezzi della cosa che AMA di più in assoluto!</h2>
+            <p>Usa le frecce direzionali per muoverti nel labirinto. Raggiungi il quadrato verde per passare al livello successivo. Attenzione ai muri!</p>
+            <button id="startButton">Inizia il Gioco</button>
+        </div>
+    </div>
+    <div id="endOverlay" class="overlay" style="display: none;">
+    <div class="overlay-content">
+        <h2>Bravissima! Hai recuperato tutti i pezzi!</h2>
+        <p>Vediamo cosa compongono...</p>
+        <button id="openCameraButton">Scoprilo!</button>
+    </div>
+</div>
+    <div id="cameraOverlay" style="display: none;">
+    <div id="cameraMessage" class="camera-message">
+        SEI TUU! TI AMO BELLA MIAAA!
+    </div>
+</div>
+    <video id="cameraFeed" style="display: none;"></video>
     <script type="module" src="main.js"></script>
 </body>
 </html>
