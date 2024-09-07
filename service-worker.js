@@ -1,10 +1,15 @@
 const CACHE_NAME = 'labirinto-pwa-v1';
 const urlsToCache = [
-    '/',
-    '/index.html',
-    '/style.css',
-    '/script.js',
-    '/icon.png'
+  '/',
+  '/index.html',
+  '/style.css',
+  '/main.js',
+  '/game.js',
+  '/maze.js',
+  '/player.js',
+  '/manifest.json',
+  '/icons/icon-192x192.png',
+  '/icons/icon-512x512.png'
 ];
 
 self.addEventListener('install', event => {
