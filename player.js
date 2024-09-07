@@ -5,13 +5,9 @@ class Player {
         this.size = size;
     }
 
-    move(direction, cellSize) {
-        switch(direction) {
-            case 'up': this.y -= cellSize; break;
-            case 'down': this.y += cellSize; break;
-            case 'left': this.x -= cellSize; break;
-            case 'right': this.x += cellSize; break;
-        }
+    move(newX, newY) {
+        this.x = newX;
+        this.y = newY;
     }
 
     draw(ctx) {

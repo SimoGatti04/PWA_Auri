@@ -26,6 +26,10 @@ class Maze {
         carve(1, 1);
         this.maze[1][1] = 0;
         this.maze[this.gridSize - 2][this.gridSize - 2] = 0;
+        console.log('Generated maze:');
+        for (let row of this.maze) {
+            console.log(row.join(' '));
+        }
     }
 
     draw(ctx) {
@@ -40,9 +44,12 @@ class Maze {
     }
 
     isWall(x, y) {
-        const gridX = Math.floor(x / this.cellSize);
-        const gridY = Math.floor(y / this.cellSize);
-        return this.maze[gridY][gridX] === 1;
+        // Assicuriamoci che le coordinate siano all'interno dei limiti del labirinto
+        if (x < 0 || x >= this.gridSize || y < 0 || y >= this.gridSize) {
+            return true; // Consideriamo fuori dai limiti come un muro
+        }
+        console.log(`Maze at (${x}, ${y}): ${this.maze[y][x]}`);
+        return this.maze[y][x] === 1;
     }
 }
 
